@@ -9,10 +9,12 @@ const Folder = (props) => {
     }, [])
 
     return (<div className={'folder'} ref={element} id={props.id}>
-        <span style={{top: 0}}>{Math.round(rect.top)}</span>
-        <span style={{left: 0}}>{Math.round(rect.left)}</span>
-        <span style={{right: 0}}>{Math.round(rect.right)}</span>
-        <span style={{bottom: 0}}>{Math.round(rect.bottom)}</span>
+        <div>
+            <span style={{top: 0}}>{Math.round(rect.top)}</span>
+            <span style={{left: 0}}>{Math.round(rect.left)}</span>
+            <span style={{right: 0}}>{Math.round(rect.right)}</span>
+            <span style={{bottom: 0}}>{Math.round(rect.bottom)}</span>
+        </div>
     </div>);
 };
 

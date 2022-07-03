@@ -10,18 +10,20 @@ body {
     overflow-y: scroll;
 }
 
-.folder {
-    margin: 20px;
+.folder > div {
+    padding: 0;
+    margin: 5px;
     width: 100px;
     height: 100px;
     display: flex;
     flex-wrap: nowrap;
+    border-radius: 5px;
     position: relative;
     align-items: center;
     align-content: center;
     flex-direction: column;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
 }
 
 .folder span {
@@ -30,10 +32,18 @@ body {
 
 .highlight {
     border-radius: 10px;
-    background-color: #fff28f;
+    background-color: rgba(235, 172, 12, 0.3);
+    outline: rgba(235, 172, 12, 0.5) 1px solid;
+}
+
+.highlight > div {
+    padding: 0;
+    margin: 5px;
+    opacity: 0.6;
 }
 
 .main {
+    gap: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
