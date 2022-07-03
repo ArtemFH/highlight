@@ -63,9 +63,15 @@ function App() {
     }
 
     const handleClick = useCallback(e => {
+        let coordinates = {
+            page: {x: e.pageX, y: e.pageY},
+            client: {x: e.clientX, y: e.clientY}
+        }
         if (e.type === "mousedown") {
             setDown(!down)
             setCount(0)
+            const axis = getAxis(start.client, coordinates.client)
+            Array.prototype.map.call(document.getElementsByClassName('folder'), (element) => highlight(coordinates.client, coordinates.client, element, axis))
             setStart({page: {x: e.pageX, y: e.pageY}, client: {x: e.clientX, y: e.clientY}})
         } else if (e.type === "mouseup") {
             setDown(down)
